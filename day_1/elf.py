@@ -18,12 +18,9 @@ for elf in (data):
     elfCalorieTotal.append(np.sum(elf))
 print(elfCalorieTotal)
 
-
-lowElfCalorie = -1
-maxCalorie = (-1, lowElfCalorie)
+maxCalorie = -1
 for idx, elfCalorie in enumerate(elfCalorieTotal):
-    if elfCalorie > maxCalorie[lowElfCalorie]:
-        maxCalorie = (idx, elfCalorie)
-
-print(maxCalorie)
-
+    if elfCalorie > maxCalorie:
+        maxCalorie = elfCalorie
+        max = (idx, maxCalorie)
+print(max)
